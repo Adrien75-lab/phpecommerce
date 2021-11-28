@@ -1,8 +1,9 @@
 <?php
+session_start();
 require "include.php";
 $url = trim($_SERVER['PATH_INFO'],'/');
 $url = explode('/',$url);
-$route = array("accueil", "contact");
+$route = array("accueil", "contact","produit","category","details","panier","supprimer","actionInscription","deconnexion","profil","actionConnexion");
 // print_r($url);
 
 $action = $url[0];
@@ -25,3 +26,4 @@ require VIEWS.SP."templates".SP."default.php";
 
 
 ?>
+
